@@ -6,11 +6,15 @@ To run locally:
 1. `yarn install` or `npm install`
 1. `yarn start` or `npm start`
 
-## Tooling Choices
+## Project Management
+
+To keep track of issues/tasks, I created a Trello board: [Flex-Grid]](https://trello.com/b/rRxMpxnG)
+
+## Approach
 
 My approach to tooling/framework selection is to only add stuff if necessary. As I add frameworks I'll document them here.
 
-### The Tools
+### Tool Selection
 
 1. **Framework - React** - The alternative approach I was thinking about was using [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components) to build an appropriate element and just write a quick script to make the data available to the element. I chose `React` for the following reasons:
   - *Readability* - More people are familiar with React than web components, including myself. I am all for stepping outside of my comfort zone, but doing so under a tight deadline isn't appropriate.
