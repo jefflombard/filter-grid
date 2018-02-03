@@ -13,7 +13,7 @@ import * as actionCreators from './actionCreators';
 const middlewares = [];
 middlewares.push(thunk.withExtraArgument());
 const store = compose(applyMiddleware(...middlewares))(createStore)(reducer);
-const actions = bindActionCreators(actionCreators, store.dispatch);
+bindActionCreators(actionCreators, store.dispatch);
 
 // Attach provider and App to DOM
 ReactDOM.render(
