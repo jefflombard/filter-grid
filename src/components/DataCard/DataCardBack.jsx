@@ -16,7 +16,7 @@ class DataCardBack extends Component {
     } = this.props;
     const altTitle = `${heroId} background image reversed`;
     const tagElements = tags.map(tag=>{
-      return <DataCardBackTag tag={tag} />;
+      return <DataCardBackTag key={tag+'key'} tag={tag} />;
     });
 
     return (
@@ -41,9 +41,6 @@ class DataCardBack extends Component {
 DataCardBack.propTypes = {
   heroId: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  tags: PropTypes.arrayOf(PropTypes.shape({
-     tag: PropTypes.string.isRequired,
-   })).isRequired,
 };
 
 export default DataCardBack;

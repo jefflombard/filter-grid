@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { loadDataFromHero } from './actionCreators';
-import DataCard from './components/DataCard/';
+import DataCardContainer from './components/DataCardContainer/';
 
 class App extends Component {
   componentDidMount() {
@@ -11,20 +11,16 @@ class App extends Component {
   }
 
   render() {
-    
-    // Remove this
-    let listTest = ['UX','Consulting'];
+    const cards = this.props.state.data.cards;
+    if (cards){
+      return(
+        <DataCardContainer visibleCards={cards}/>
+      )
+    }
     
     return (
       <div>
-        <DataCard
-          heroId="Salesforce"
-          tags={listTest}
-          image="http://herodigital.com/wp-content/uploads/2015/12/salesforce-featured.png"
-          title="Re-Imagining the Digital CX for Nerium International"
-          description="As Nerium International repositioned it's brand."
-          featured={false}
-          />
+        Loading
       </div>
     );
   }

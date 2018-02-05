@@ -46,11 +46,11 @@ class DataCardFront extends Component {
   }
 }
 
-DataCardFront.PropTypes = {
+DataCardFront.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  featured: PropTypes.bool.isRequired,
+  featured: PropTypes.number.isRequired,
 };
 
 export default DataCardFront;
