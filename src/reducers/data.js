@@ -1,4 +1,4 @@
-export default function search(state = {}, action) {
+export default function data(state = {}, action) {
   switch (action.type) {
     case 'LOADING SUCCESS':
       return { externalDataStatus: "SUCCESS", cards: action.payload, ...state };

@@ -1,3 +1,5 @@
+export * from './filters';
+
 export function loadDataFromHero(dispatch) {
   
   dispatch({
@@ -23,4 +25,8 @@ export function loadDataFromHero(dispatch) {
     }
   )};
   
+}
+
+export function mapStateToProps(state) {
+  return { state };
 }
