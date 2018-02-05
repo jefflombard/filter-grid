@@ -1,21 +1,35 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { connect } from 'react-redux';
+
+import { loadDataFromHero, mapStateToProps } from './actionCreators';
+import DataCardContainer from './components/DataCardContainer/';
+import FilterContainer from './components/FilterContainer';
 
 class App extends Component {
+  componentDidMount() {
+    const { dispatch } = this.props;
+    dispatch(loadDataFromHero(dispatch));
+  }
+
   render() {
+    const cards = this.props.state.data.cards;
+    const filters = this.props.state.filter.tags;
+    
+    if (cards){
+      return(
+        <div>
+          <FilterContainer filters={filters}/>
+          <DataCardContainer visibleCards={cards}/>
+        </div>
+      )
+    }
+    
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        Loading
       </div>
     );
   }
 }
 
-export default App;
+export default connect(mapStateToProps)(App)

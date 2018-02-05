@@ -1,0 +1,50 @@
+.data-card-back{
+  position: relative;
+  border-color: '#000';
+  border-style: solid;
+  border-width: 2px;
+  height:100%;
+  overflow: hidden;
+  
+  .data-card-back-img {
+    transform: scaleX(-1);
+    opacity: 0.4;
+  }
+
+  .data-card-back-text {
+    margin: 2%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    width: 96%;
+
+  }
+
+  .data-card-back-title {
+    font-weight: bold;
+    line-height: 130%;
+    text-align: center;
+  }
+
+  .data-card-back-cta {
+    bottom: 0;
+    color: black;
+    font-size: 10px;
+    font-weight: bold;
+    margin: 5%;
+    position: absolute;
+    right: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+      .data-card-back-cta-chevron-right{
+        display: inline-block;
+        border-width: 2px 2px 0 0;
+        border-style: solid;
+        border-color: black;
+        height: 5px;
+        width: 5px;
+        transform: rotate(45deg);
+      }
+  }
+}
