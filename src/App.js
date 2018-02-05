@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { loadDataFromHero } from './actionCreators';
+import { loadDataFromHero, mapStateToProps } from './actionCreators';
 import DataCardContainer from './components/DataCardContainer/';
 import FilterContainer from './components/FilterContainer';
 
@@ -13,10 +13,12 @@ class App extends Component {
 
   render() {
     const cards = this.props.state.data.cards;
+    const filters = this.props.state.filter.tags;
+    
     if (cards){
       return(
         <div>
-          <FilterContainer />
+          <FilterContainer filters={filters}/>
           <DataCardContainer visibleCards={cards}/>
         </div>
       )
@@ -28,10 +30,6 @@ class App extends Component {
       </div>
     );
   }
-}
-
-function mapStateToProps(state) {
-  return { state };
 }
 
 export default connect(mapStateToProps)(App)
