@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import { loadDataFromHero } from './actionCreators';
 import DataCardContainer from './components/DataCardContainer/';
+import FilterContainer from './components/FilterContainer';
 
 class App extends Component {
   componentDidMount() {
@@ -14,7 +15,10 @@ class App extends Component {
     const cards = this.props.state.data.cards;
     if (cards){
       return(
-        <DataCardContainer visibleCards={cards}/>
+        <div>
+          <FilterContainer />
+          <DataCardContainer visibleCards={cards}/>
+        </div>
       )
     }
     
