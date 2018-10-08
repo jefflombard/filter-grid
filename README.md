@@ -8,7 +8,7 @@ To run locally:
 
 ## Project Management
 
-To keep track of issues/tasks, I created a Trello board: [Flex-Grid]](https://trello.com/b/rRxMpxnG)
+To keep track of issues/tasks, I created a Trello board: [Flex-Grid](https://trello.com/b/rRxMpxnG)
 
 ## Approach
 
